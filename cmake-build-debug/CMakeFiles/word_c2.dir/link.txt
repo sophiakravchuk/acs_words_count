@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/word_c2.dir/main.cpp.o  -o word_c2 -lpthread 
