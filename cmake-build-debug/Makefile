@@ -150,33 +150,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-maps.o: maps.cpp.o
-
-.PHONY : maps.o
-
-# target to build an object file
-maps.cpp.o:
-	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/maps.cpp.o
-.PHONY : maps.cpp.o
-
-maps.i: maps.cpp.i
-
-.PHONY : maps.i
-
-# target to preprocess a source file
-maps.cpp.i:
-	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/maps.cpp.i
-.PHONY : maps.cpp.i
-
-maps.s: maps.cpp.s
-
-.PHONY : maps.s
-
-# target to generate assembly for a file
-maps.cpp.s:
-	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/maps.cpp.s
-.PHONY : maps.cpp.s
-
 queue.o: queue.cpp.o
 
 .PHONY : queue.o
@@ -270,9 +243,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... maps.o"
-	@echo "... maps.i"
-	@echo "... maps.s"
 	@echo "... queue.o"
 	@echo "... queue.i"
 	@echo "... queue.s"

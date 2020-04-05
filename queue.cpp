@@ -11,9 +11,9 @@ m_queue::m_queue(int threads_count) {
     am_of_active_text = 0;
     will_be_push_dicts = true;
     will_be_push_text = true;
+    am_of_threads_text = threads_count;
     start_threads();
     // am_of_threads_dicts = threads_count;
-    am_of_threads_text = threads_count;
 }
 
 void m_queue::change_working_th_dicts(int value){
@@ -31,6 +31,9 @@ void m_queue::change_working_th_text(int value){
 void m_queue::kill_th_text(){
     std::unique_lock<std::mutex> mlock(mutex_threads);
     am_of_threads_text--;
+    if (am_of_threads_text == 0){
+        will_be_push_dicts = false;
+    }
     mlock.unlock();
 }
 
@@ -59,7 +62,7 @@ std::vector<std::map<std::string, int>*> *m_queue::pop_d(int amount){
     std::unique_lock<std::mutex> mlock(mutex_dicts);
     while(true){
         if (queue_dicts->size() <= 1 && !will_be_push_dicts && am_of_active_dicts == 0){
-            if(can_make_thread_dict()) {
+            if(can_make_thread()) {
                 cv.notify_all();
             }
             return NULL;
@@ -70,7 +73,7 @@ std::vector<std::map<std::string, int>*> *m_queue::pop_d(int amount){
             break;
         }
     }
-
+    std::cout << "dict work" << std::endl;
     auto *result = new std::vector<std::map<std::string, int>*>();
     for (int i = 0; i < amount; i++){
         std::map<std::string, int>* elem = queue_dicts->front();
@@ -90,6 +93,7 @@ std::vector<std::string>* m_queue::pop_t(){
             if (queue_text->size() <= 0 && !will_be_push_text){
                 std::cout << "text dead" << std::endl;
                 cv.notify_all();
+                mlock.unlock();
                 return NULL;
             } else if (queue_text->size() <= 0 && will_be_push_text) {
                 std::cout << "text sleep" << std::endl << std::flush;

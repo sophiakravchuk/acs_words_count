@@ -1,41 +1,15 @@
 #include <iostream>
 #include <map>
 #include "queue.h"
-#include "maps.h"
-#include "threads_merge.h"
+
+//#include "threads_merge.h"
 #include "time_measurement.h"
 
 
-void one_main(int am_threads){
-//    std::cout << "Creating arrays..." << std::flush;
-//    auto start_time = get_current_time_fenced();
-//    m_queue *queue = make_maps(am_threads);
-//    auto total_time = get_current_time_fenced() - start_time;
-//    auto t = to_us(total_time);
-//    std::cout << " Done " << t << std::endl<< std::flush;
-    auto start_time = get_current_time_fenced();
-    m_queue *queue = make_maps(am_threads);
-//    queue->merge_maps(queue, am_threads);
-
-    auto total_time = get_current_time_fenced() - start_time;
-
-
-    std::cout << "Total time, (am of th "<< am_threads << " ): " << to_us(total_time) << std::endl;
-//
-//    auto d1 = queue->pop_d();
-//    for(const auto& x: d1){
-//        std::cout << x.first << x.second << std::endl;
-//    }
-//    std::cout << std::endl;
-//    auto d2 = queue->pop_d();
-//    for(const auto& x: d2){
-//        std::cout << x.first << x.second << std::endl;
-//    }
-}
 
 std::vector<std::string> *create_vecs(int n){
     auto *result = new std::vector<std::string>();
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i < n; i++){
         std::string str = std::to_string(i);
         (*result).push_back(str);
     }
@@ -69,7 +43,9 @@ int main() {
 //    std::map<std::string, int>* c = two_main(2);
 //    std::map<std::string, int>* d = two_main(1);
 
-    std::cout << a << std::endl;
+    std::cout << a->size() << std::endl;
+    std::cout << (*a)["0"] << std::endl;
+
 //    std::cout << b << std::endl;
 //    std::cout << c << std::endl;
 //    std::cout << d << std::endl;

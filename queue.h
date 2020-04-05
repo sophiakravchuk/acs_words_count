@@ -14,7 +14,7 @@ private:
     mutable std::mutex mutex_threads;
     std::condition_variable cv;
     bool will_be_push_dicts;
-    bool will_be_push_text;
+
     int am_of_active_dicts;
     int am_of_active_text;
     // int am_of_threads_dicts;
@@ -22,8 +22,7 @@ private:
     int am_threads;
     void merge_for_one_thread();
     bool can_make_thread();
-    bool can_make_thread_text();
-    bool can_make_thread_dict();
+
 
     void count_part_words();
     void start_threads();
@@ -39,7 +38,7 @@ public:
     void change_working_th_dicts(int value);
     void change_working_th_text(int value);
     void kill_th_text();
-
+    bool will_be_push_text;
     // void add_returning_dict();
     // void sub_returning_dict();
 
@@ -60,9 +59,6 @@ public:
 
     void push_text(std::vector<std::string>* elem);
     std::vector<std::string>* pop_t();
-
-    size_t get_size_dicts() const;
-    size_t get_size_text() const;
 
     std::map<std::string, int>* get_res();
 

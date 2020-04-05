@@ -87,12 +87,6 @@
 		<Unit filename="/home/student/CLionProjects/word_c2/main.cpp">
 			<Option target="word_c2"/>
 		</Unit>
-		<Unit filename="/home/student/CLionProjects/word_c2/maps.cpp">
-			<Option target="word_c2"/>
-		</Unit>
-		<Unit filename="/home/student/CLionProjects/word_c2/maps.h">
-			<Option target="word_c2"/>
-		</Unit>
 		<Unit filename="/home/student/CLionProjects/word_c2/queue.cpp">
 			<Option target="word_c2"/>
 		</Unit>

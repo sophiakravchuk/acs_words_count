@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/word_c2.dir/main.cpp.o CMakeFiles/word_c2.dir/maps.cpp.o CMakeFiles/word_c2.dir/queue.cpp.o CMakeFiles/word_c2.dir/threads_merge.cpp.o CMakeFiles/word_c2.dir/time_measurement.cpp.o  -o word_c2 -lpthread 
+/usr/bin/c++  -g   CMakeFiles/word_c2.dir/main.cpp.o CMakeFiles/word_c2.dir/queue.cpp.o CMakeFiles/word_c2.dir/threads_merge.cpp.o CMakeFiles/word_c2.dir/time_measurement.cpp.o  -o word_c2 -lpthread 

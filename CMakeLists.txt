@@ -6,8 +6,6 @@ find_package(Threads REQUIRED)
 set (SOURCES
         main.cpp
 
-        maps.cpp
-        maps.h
         queue.cpp
         queue.h
         threads_merge.cpp

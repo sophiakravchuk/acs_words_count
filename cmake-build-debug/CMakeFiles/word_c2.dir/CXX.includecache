@@ -13,28 +13,8 @@ map
 -
 queue.h
 /home/student/CLionProjects/word_c2/queue.h
-maps.h
-/home/student/CLionProjects/word_c2/maps.h
-threads_merge.h
-/home/student/CLionProjects/word_c2/threads_merge.h
 time_measurement.h
 /home/student/CLionProjects/word_c2/time_measurement.h
-
-/home/student/CLionProjects/word_c2/maps.h
-map
--
-queue.h
-/home/student/CLionProjects/word_c2/queue.h
-
-/home/student/CLionProjects/word_c2/queue.cpp
-map
--
-algorithm
--
-iostream
--
-queue.h
-/home/student/CLionProjects/word_c2/queue.h
 
 /home/student/CLionProjects/word_c2/queue.h
 queue
@@ -45,14 +25,6 @@ mutex
 -
 thread
 -
-
-/home/student/CLionProjects/word_c2/threads_merge.h
-thread
--
-map
--
-queue.h
-/home/student/CLionProjects/word_c2/queue.h
 
 /home/student/CLionProjects/word_c2/time_measurement.h
 chrono
