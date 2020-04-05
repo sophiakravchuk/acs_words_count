@@ -43,20 +43,19 @@ std::vector<std::string> *create_vecs(int n){
 }
 
 std::map<std::string, int> * two_main(int am_threads){
-    int n = 500;
-    int dicts = 200;
+    int len = 500;
+    int vects = 200;
 
-    std::vector<std::string> *d1 = create_vecs(n);
+    std::vector<std::string> *d1 = create_vecs(len);
     auto start_time = get_current_time_fenced();
 
     auto *que = new m_queue(am_threads);
-    for (auto i = 0; i < dicts - 1; i++) {
-//        auto new_dict = std::map<std::string, int>(d1);
+    for (auto i = 0; i < vects - 1; i++) {
         auto new_dict = new std::vector<std::string>(*d1);
         que->push_text(new_dict);
     }
     que->push_text(d1);
-    que->wont_be_more_data_text();
+    que->will_be_push_text = false;
     std::cout << "pushed" << std::endl;
     auto res =  que->get_res();
     auto total_time = get_current_time_fenced() - start_time;
