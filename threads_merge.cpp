@@ -1,15 +1,14 @@
-#include <thread>
+#include "threads_merge.h"
 
-
-void merge_for_one_thread(m_queue<std::map<std::string, int>*> *queue){
+void merge_for_one_thread(m_queue *queue){
     while (true) {
-        std::vector<std::map<std::string, int>*> *dicts = queue->pop(2);
+        std::vector<std::map<std::string, int>*> *dicts = queue->pop_d(2);
         if (dicts == NULL || dicts->size() <= 1){
 //            break;
 //            std::cout << "I'm Out" << std::endl;
             break;
         }
-        queue->am_of_returning_dicts++;
+        queue->add_working_th_dicts();
         std::map<std::string, int> *dict1 = (*dicts)[0];
         std::map<std::string, int> *dict2 = (*dicts)[1];
 
@@ -21,12 +20,12 @@ void merge_for_one_thread(m_queue<std::map<std::string, int>*> *queue){
             }
         }
         delete dict1;
-        queue->push(dict2);
-        queue->am_of_returning_dicts--;
+        queue->push_dict(dict2);
+        queue->sub_working_th_dicts();
     }
 }
 
-int merge_maps(m_queue<std::map<std::string, int>*> *queue, int am_threads){
+int merge_maps(m_queue *queue, int am_threads){
     std::vector<std::thread> vector_of_threads;
     vector_of_threads.reserve(am_threads);
 

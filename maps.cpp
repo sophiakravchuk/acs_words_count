@@ -1,3 +1,5 @@
+#include "maps.h"
+
 std::map<std::string, int> *create_dict(int n){
      auto *result = new std::map<std::string, int>();
     for(int i = 0; i <= n; i++){
@@ -8,19 +10,19 @@ std::map<std::string, int> *create_dict(int n){
 }
 
 
-m_queue<std::map<std::string, int>*> *make_maps() {
+m_queue *make_maps(int am_threads) {
     int n = 50000;
     int dicts = 200;
     std::map<std::string, int> *d1 = create_dict(n);
 //    std::vector<std::map<std::string, int>> arr;
 //    arr.reserve(dicts);
-    auto *que = new m_queue<std::map<std::string, int>*>();
+    auto *que = new m_queue(am_threads);
     for(auto i = 0; i < dicts - 1; i++) {
 //        auto new_dict = std::map<std::string, int>(d1);
         auto new_dict = new std::map<std::string, int>(*d1);
-        que->push(new_dict);
+        que->push_dict(new_dict);
     }
-    que->push(d1);
+    que->push_dict(d1);
 ////
 ////    d1["aaa"] = 1;
 ////    d1["bbb"] = 2;
@@ -67,7 +69,7 @@ m_queue<std::map<std::string, int>*> *make_maps() {
 ////    que->push(d6);
 ////    que->push(d7);
 ////    que->push(d8);
-    que->wont_be_more_data();
+    que->wont_be_more_data_dicts();
 //    std::map<std::string, int> p;
 //    p["."] = 1;
 //    que->set_poison_pill(p);
@@ -75,5 +77,22 @@ m_queue<std::map<std::string, int>*> *make_maps() {
 //    std::string str = ".";
 //    p[str] = 1;
 //    que->push(p);
+    return que;
+}
+
+
+m_queue *make_vec(int am_threads) {
+    int n = 50000;
+    int dicts = 200;
+    std::map<std::string, int> *d1 = create_dict(n);
+//    std::vector<std::map<std::string, int>> arr;
+//    arr.reserve(dicts);
+    auto *que = new m_queue(am_threads);
+    for (auto i = 0; i < dicts - 1; i++) {
+//        auto new_dict = std::map<std::string, int>(d1);
+        auto new_dict = new std::map<std::string, int>(*d1);
+        que->push_dict(new_dict);
+    }
+    que->push_dict(d1);
     return que;
 }

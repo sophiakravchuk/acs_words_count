@@ -1,43 +1,78 @@
 #include <iostream>
 #include <map>
-#include "time_measurement.cpp"
-#include "queue.cpp"
-#include "maps.cpp"
-#include "threads_merge.cpp"
+#include "queue.h"
+#include "maps.h"
+#include "threads_merge.h"
+#include "time_measurement.h"
+
 
 void one_main(int am_threads){
-    std::cout << "Creating arrays..." << std::flush;
+//    std::cout << "Creating arrays..." << std::flush;
+//    auto start_time = get_current_time_fenced();
+//    m_queue *queue = make_maps(am_threads);
+//    auto total_time = get_current_time_fenced() - start_time;
+//    auto t = to_us(total_time);
+//    std::cout << " Done " << t << std::endl<< std::flush;
     auto start_time = get_current_time_fenced();
-    m_queue<std::map<std::string, int>*> *queue = make_maps();
+    m_queue *queue = make_maps(am_threads);
+//    queue->merge_maps(queue, am_threads);
+
     auto total_time = get_current_time_fenced() - start_time;
-    std::cout << " Done " << to_us(total_time) << std::endl<< std::flush;
-    start_time = get_current_time_fenced();
 
-    merge_maps(queue, am_threads);
-
-    auto finish_time = get_current_time_fenced();
-    total_time = finish_time - start_time;
 
     std::cout << "Total time, (am of th "<< am_threads << " ): " << to_us(total_time) << std::endl;
 //
-//    auto d1 = queue->pop();
+//    auto d1 = queue->pop_d();
 //    for(const auto& x: d1){
 //        std::cout << x.first << x.second << std::endl;
 //    }
 //    std::cout << std::endl;
-//    auto d2 = queue->pop();
+//    auto d2 = queue->pop_d();
 //    for(const auto& x: d2){
 //        std::cout << x.first << x.second << std::endl;
 //    }
 }
 
+std::vector<std::string> *create_vecs(int n){
+    auto *result = new std::vector<std::string>();
+    for(int i = 0; i <= n; i++){
+        std::string str = std::to_string(i);
+        (*result).push_back(str);
+    }
+    return result;
+}
+
+std::map<std::string, int> * two_main(int am_threads){
+    int n = 500;
+    int dicts = 200;
+
+    std::vector<std::string> *d1 = create_vecs(n);
+    auto start_time = get_current_time_fenced();
+
+    auto *que = new m_queue(am_threads);
+    for (auto i = 0; i < dicts - 1; i++) {
+//        auto new_dict = std::map<std::string, int>(d1);
+        auto new_dict = new std::vector<std::string>(*d1);
+        que->push_text(new_dict);
+    }
+    que->push_text(d1);
+    que->wont_be_more_data_text();
+    std::cout << "pushed" << std::endl;
+    auto res =  que->get_res();
+    auto total_time = get_current_time_fenced() - start_time;
+    std::cout << "Total time, (am of th "<< am_threads << " ): " << to_us(total_time) << std::endl;
+    return res;
+}
 
 int main() {
-    one_main(4);
-    one_main(3);
-    one_main(2);
-    one_main(1);
+    std::map<std::string, int>* a = two_main(4);
+//    std::map<std::string, int>* b = two_main(3);
+//    std::map<std::string, int>* c = two_main(2);
+//    std::map<std::string, int>* d = two_main(1);
 
-
+    std::cout << a << std::endl;
+//    std::cout << b << std::endl;
+//    std::cout << c << std::endl;
+//    std::cout << d << std::endl;
     return 0;
 }
