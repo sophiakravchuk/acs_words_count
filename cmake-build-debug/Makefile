@@ -123,6 +123,33 @@ word_c2/fast:
 	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/build
 .PHONY : word_c2/fast
 
+file_to_vecs.o: file_to_vecs.cpp.o
+
+.PHONY : file_to_vecs.o
+
+# target to build an object file
+file_to_vecs.cpp.o:
+	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/file_to_vecs.cpp.o
+.PHONY : file_to_vecs.cpp.o
+
+file_to_vecs.i: file_to_vecs.cpp.i
+
+.PHONY : file_to_vecs.i
+
+# target to preprocess a source file
+file_to_vecs.cpp.i:
+	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/file_to_vecs.cpp.i
+.PHONY : file_to_vecs.cpp.i
+
+file_to_vecs.s: file_to_vecs.cpp.s
+
+.PHONY : file_to_vecs.s
+
+# target to generate assembly for a file
+file_to_vecs.cpp.s:
+	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/file_to_vecs.cpp.s
+.PHONY : file_to_vecs.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... word_c2"
 	@echo "... edit_cache"
+	@echo "... file_to_vecs.o"
+	@echo "... file_to_vecs.i"
+	@echo "... file_to_vecs.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

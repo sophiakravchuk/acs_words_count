@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/word_c2.dir/file_to_vecs.cpp.o"
   "CMakeFiles/word_c2.dir/main.cpp.o"
   "CMakeFiles/word_c2.dir/queue.cpp.o"
   "CMakeFiles/word_c2.dir/threads_merge.cpp.o"

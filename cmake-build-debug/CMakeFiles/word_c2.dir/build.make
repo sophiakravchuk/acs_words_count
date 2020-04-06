@@ -57,9 +57,22 @@ include CMakeFiles/word_c2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/word_c2.dir/flags.make
 
+CMakeFiles/word_c2.dir/file_to_vecs.cpp.o: CMakeFiles/word_c2.dir/flags.make
+CMakeFiles/word_c2.dir/file_to_vecs.cpp.o: ../file_to_vecs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/word_c2.dir/file_to_vecs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/word_c2.dir/file_to_vecs.cpp.o -c /home/student/CLionProjects/word_c2/file_to_vecs.cpp
+
+CMakeFiles/word_c2.dir/file_to_vecs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/word_c2.dir/file_to_vecs.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/CLionProjects/word_c2/file_to_vecs.cpp > CMakeFiles/word_c2.dir/file_to_vecs.cpp.i
+
+CMakeFiles/word_c2.dir/file_to_vecs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/word_c2.dir/file_to_vecs.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/CLionProjects/word_c2/file_to_vecs.cpp -o CMakeFiles/word_c2.dir/file_to_vecs.cpp.s
+
 CMakeFiles/word_c2.dir/main.cpp.o: CMakeFiles/word_c2.dir/flags.make
 CMakeFiles/word_c2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/word_c2.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/word_c2.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/word_c2.dir/main.cpp.o -c /home/student/CLionProjects/word_c2/main.cpp
 
 CMakeFiles/word_c2.dir/main.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/word_c2.dir/main.cpp.s: cmake_force
 
 CMakeFiles/word_c2.dir/queue.cpp.o: CMakeFiles/word_c2.dir/flags.make
 CMakeFiles/word_c2.dir/queue.cpp.o: ../queue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/word_c2.dir/queue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/word_c2.dir/queue.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/word_c2.dir/queue.cpp.o -c /home/student/CLionProjects/word_c2/queue.cpp
 
 CMakeFiles/word_c2.dir/queue.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/word_c2.dir/queue.cpp.s: cmake_force
 
 CMakeFiles/word_c2.dir/threads_merge.cpp.o: CMakeFiles/word_c2.dir/flags.make
 CMakeFiles/word_c2.dir/threads_merge.cpp.o: ../threads_merge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/word_c2.dir/threads_merge.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/word_c2.dir/threads_merge.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/word_c2.dir/threads_merge.cpp.o -c /home/student/CLionProjects/word_c2/threads_merge.cpp
 
 CMakeFiles/word_c2.dir/threads_merge.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/word_c2.dir/threads_merge.cpp.s: cmake_force
 
 CMakeFiles/word_c2.dir/time_measurement.cpp.o: CMakeFiles/word_c2.dir/flags.make
 CMakeFiles/word_c2.dir/time_measurement.cpp.o: ../time_measurement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/word_c2.dir/time_measurement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/word_c2.dir/time_measurement.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/word_c2.dir/time_measurement.cpp.o -c /home/student/CLionProjects/word_c2/time_measurement.cpp
 
 CMakeFiles/word_c2.dir/time_measurement.cpp.i: cmake_force
@@ -111,6 +124,7 @@ CMakeFiles/word_c2.dir/time_measurement.cpp.s: cmake_force
 
 # Object files for target word_c2
 word_c2_OBJECTS = \
+"CMakeFiles/word_c2.dir/file_to_vecs.cpp.o" \
 "CMakeFiles/word_c2.dir/main.cpp.o" \
 "CMakeFiles/word_c2.dir/queue.cpp.o" \
 "CMakeFiles/word_c2.dir/threads_merge.cpp.o" \
@@ -119,13 +133,14 @@ word_c2_OBJECTS = \
 # External object files for target word_c2
 word_c2_EXTERNAL_OBJECTS =
 
+word_c2: CMakeFiles/word_c2.dir/file_to_vecs.cpp.o
 word_c2: CMakeFiles/word_c2.dir/main.cpp.o
 word_c2: CMakeFiles/word_c2.dir/queue.cpp.o
 word_c2: CMakeFiles/word_c2.dir/threads_merge.cpp.o
 word_c2: CMakeFiles/word_c2.dir/time_measurement.cpp.o
 word_c2: CMakeFiles/word_c2.dir/build.make
 word_c2: CMakeFiles/word_c2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable word_c2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable word_c2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/word_c2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

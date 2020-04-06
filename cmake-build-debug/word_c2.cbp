@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/student/CLionProjects/word_c2/file_of_vecs.h">
+			<Option target="word_c2"/>
+		</Unit>
+		<Unit filename="/home/student/CLionProjects/word_c2/file_to_vecs.cpp">
+			<Option target="word_c2"/>
+		</Unit>
 		<Unit filename="/home/student/CLionProjects/word_c2/main.cpp">
 			<Option target="word_c2"/>
 		</Unit>

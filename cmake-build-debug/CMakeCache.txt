@@ -217,6 +217,15 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
+//The directory containing a CMake configuration file for libzip-dev.
+libzip-dev_DIR:PATH=libzip-dev_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libzip.
+libzip_DIR:PATH=libzip_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libzipstatic.
+libzipstatic_DIR:PATH=libzipstatic_DIR-NOTFOUND
+
 //Value Computed by CMake
 word_c2_BINARY_DIR:STATIC=/home/student/CLionProjects/word_c2/cmake-build-debug
 

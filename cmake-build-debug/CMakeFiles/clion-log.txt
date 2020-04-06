@@ -1,4 +1,21 @@
 /snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/student/CLionProjects/word_c2
--- Configuring done
--- Generating done
--- Build files have been written to: /home/student/CLionProjects/word_c2/cmake-build-debug
+CMake Error at CMakeLists.txt:6 (find_package):
+  By not providing "Findlibzipstatic.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "libzipstatic", but CMake did not find one.
+
+  Could not find a package configuration file provided by "libzipstatic" with
+  any of the following names:
+
+    libzipstaticConfig.cmake
+    libzipstatic-config.cmake
+
+  Add the installation prefix of "libzipstatic" to CMAKE_PREFIX_PATH or set
+  "libzipstatic_DIR" to a directory containing one of the above files.  If
+  "libzipstatic" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/CMakeError.log".
