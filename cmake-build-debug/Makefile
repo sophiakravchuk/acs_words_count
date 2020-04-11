@@ -204,33 +204,6 @@ queue.cpp.s:
 	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/queue.cpp.s
 .PHONY : queue.cpp.s
 
-threads_merge.o: threads_merge.cpp.o
-
-.PHONY : threads_merge.o
-
-# target to build an object file
-threads_merge.cpp.o:
-	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/threads_merge.cpp.o
-.PHONY : threads_merge.cpp.o
-
-threads_merge.i: threads_merge.cpp.i
-
-.PHONY : threads_merge.i
-
-# target to preprocess a source file
-threads_merge.cpp.i:
-	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/threads_merge.cpp.i
-.PHONY : threads_merge.cpp.i
-
-threads_merge.s: threads_merge.cpp.s
-
-.PHONY : threads_merge.s
-
-# target to generate assembly for a file
-threads_merge.cpp.s:
-	$(MAKE) -f CMakeFiles/word_c2.dir/build.make CMakeFiles/word_c2.dir/threads_merge.cpp.s
-.PHONY : threads_merge.cpp.s
-
 time_measurement.o: time_measurement.cpp.o
 
 .PHONY : time_measurement.o
@@ -276,9 +249,6 @@ help:
 	@echo "... queue.o"
 	@echo "... queue.i"
 	@echo "... queue.s"
-	@echo "... threads_merge.o"
-	@echo "... threads_merge.i"
-	@echo "... threads_merge.s"
 	@echo "... time_measurement.o"
 	@echo "... time_measurement.i"
 	@echo "... time_measurement.s"

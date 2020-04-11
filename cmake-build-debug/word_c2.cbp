@@ -99,12 +99,6 @@
 		<Unit filename="/home/student/CLionProjects/word_c2/queue.h">
 			<Option target="word_c2"/>
 		</Unit>
-		<Unit filename="/home/student/CLionProjects/word_c2/threads_merge.cpp">
-			<Option target="word_c2"/>
-		</Unit>
-		<Unit filename="/home/student/CLionProjects/word_c2/threads_merge.h">
-			<Option target="word_c2"/>
-		</Unit>
 		<Unit filename="/home/student/CLionProjects/word_c2/time_measurement.cpp">
 			<Option target="word_c2"/>
 		</Unit>

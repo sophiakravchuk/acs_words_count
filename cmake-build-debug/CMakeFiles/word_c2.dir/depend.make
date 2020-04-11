@@ -12,8 +12,6 @@ CMakeFiles/word_c2.dir/main.cpp.o: ../time_measurement.h
 CMakeFiles/word_c2.dir/queue.cpp.o: ../queue.cpp
 CMakeFiles/word_c2.dir/queue.cpp.o: ../queue.h
 
-CMakeFiles/word_c2.dir/threads_merge.cpp.o: ../threads_merge.cpp
-
 CMakeFiles/word_c2.dir/time_measurement.cpp.o: ../time_measurement.cpp
 CMakeFiles/word_c2.dir/time_measurement.cpp.o: ../time_measurement.h
 

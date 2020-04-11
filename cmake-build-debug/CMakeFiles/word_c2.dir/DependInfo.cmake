@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/student/CLionProjects/word_c2/file_to_vecs.cpp" "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/word_c2.dir/file_to_vecs.cpp.o"
   "/home/student/CLionProjects/word_c2/main.cpp" "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/word_c2.dir/main.cpp.o"
   "/home/student/CLionProjects/word_c2/queue.cpp" "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/word_c2.dir/queue.cpp.o"
-  "/home/student/CLionProjects/word_c2/threads_merge.cpp" "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/word_c2.dir/threads_merge.cpp.o"
   "/home/student/CLionProjects/word_c2/time_measurement.cpp" "/home/student/CLionProjects/word_c2/cmake-build-debug/CMakeFiles/word_c2.dir/time_measurement.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
